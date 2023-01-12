@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<execution xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../XSD/execution.xsd">
+  <NMSmodel>
+     <type>
+        <realTime>
+        	<openLoop/>
+        </realTime>
+     </type>
+
+     <tendon>
+          <elasticBiSec/>
+     </tendon>
+
+     <activation>
+          <exponential/>
+     </activation>
+  	 <curve>
+  		<online/>
+  	 </curve>
+  </NMSmodel>
+  
+  <ConsumerPlugin>
+	<EMGDevice>emg_0_plugins.dll</EMGDevice>
+	<EMGDeviceFile>cfg/UpperLimbModel/executionEMG.xml</EMGDeviceFile>
+	<AngleDevice>angle_0_plugins.dll</AngleDevice>
+	<AngleDeviceFile>cfg/UpperLimbModel/executionIK.xml</AngleDeviceFile>
+	<TorqueDevice/>
+	<TorqueDeviceFile/>
+    <ComsumerPort>350</ComsumerPort>
+  </ConsumerPlugin>
+  <NameOfSubject>UpperLimbModel</NameOfSubject>
+</execution>

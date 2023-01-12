@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<executionIK xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../XSD/executionIK_ID_V2.xsd">
+	<ik>
+		<ikOption>
+			<numberOfThread>5</numberOfThread>
+			<enforceIKConstraintUse>true</enforceIKConstraintUse>
+			<kalman>
+				<kalmanOption>
+					<dt>0.0075</dt>
+				</kalmanOption>
+			</kalman>
+		</ikOption>
+		<dataFrom>
+			<markers>
+	<!--	fs: 128 Hz fc:10 Hz delay: ~0.027ms		-->
+				<lpFilterMarker>
+					<aCoeff>-1.3229 0.5000</aCoeff>
+					<bCoeff>0.0443 0.0886 0.0443</bCoeff>
+				</lpFilterMarker>
+				<maxError>0.000001</maxError>
+				<markersList>			
+					<marker>
+						<name>R.Ulna</name>
+						<weight>2</weight>
+					</marker>
+					<marker>
+						<name>MC2d</name>
+						<weight>1</weight>
+					</marker>
+					<marker>
+						<name>MC5d</name>
+						<weight>1</weight>
+					</marker>
+					<marker>
+						<name>FAL</name>
+						<weight>1</weight>
+					</marker>
+					<marker>
+						<name>MC2p</name>
+						<weight>1</weight>
+					</marker>
+					<marker>
+						<name>R.Radius</name>
+						<weight>2</weight>
+					</marker>	
+					<marker>
+						<name>MC5p</name>
+						<weight>1</weight>
+					</marker>
+					<marker>
+						<name>FA1</name>
+						<weight>2</weight>
+					</marker>	
+					<marker>
+						<name>FA2</name>
+						<weight>2</weight>
+					</marker>
+				</markersList>
+			</markers>
+		</dataFrom>
+	</ik>
+    <id>
+		<lpFilterGRF>
+<!--	fs: 2048 Hz fc 9 Hz delay: ~0.029ms	-->
+			<aCoeff>-1.9610 0.9617</aCoeff>
+			<bCoeff>0.0001869 0.0003739 0.0001869</bCoeff>
+		</lpFilterGRF>
+    	<plateForceBody> </plateForceBody>
+    </id>
+    <OsimFile>cfg/UpperLimbModel/MOBL_ARMS_fixed_41.osim</OsimFile>
+    <LabFile>cfg/UMG.xml</LabFile>
+    <TranslateFile>cfg/UpperLimbModel/LeftArm_scaled_Spline.txt</TranslateFile>
+    <ip>10.76.115.143</ip>
+    <port>22222</port>
+</executionIK>

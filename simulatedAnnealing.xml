@@ -1,0 +1,54 @@
+﻿<?xml version="1.0"?>
+<simulatedAnnealing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../XSD/simulatedAnnealing.xsd">
+        
+	<EMGProccesing>cfg/UpperLimbModel/executionEMG.xml</EMGProccesing>
+	<subjectXML>cfg/UpperLimbModel/MOBL_ARMS_41.xml</subjectXML>
+	<NameOfSubject>UpperLimbModel</NameOfSubject>
+	<dofToCalibrate>elbow_flexion flexion pro_sup</dofToCalibrate>
+	<computeSpline>
+		<use>false</use>
+		<osimFile>cfg/UpperLimbModel/MOBL_ARMS_41_spline.osim</osimFile>
+		<TranslateFile>cfg/UpperLimbModel/LeftArm_scaled_Spline.txt</TranslateFile>
+		<printingOption>3</printingOption>
+		<numberOfNode>9</numberOfNode>
+	</computeSpline>
+	<preScaling>
+		<use>false</use>
+		<unscaledOsimFile>cfg/UpperLimbModel/MOBL_ARMS_41.osim</unscaledOsimFile>
+		<osimFile>cfg/UpperLimbModel/MOBL_ARMS_41_Scaled.osim</osimFile>
+		<TranslateFile>cfg/UpperLimbModel/LeftArm_scaled_Spline.txt</TranslateFile>
+	</preScaling>
+	<calibration>
+		<ObjectiveFunction>StrengthCoefficients_ShapeFactor_TendonSlackLength_single</ObjectiveFunction>
+		<use>true</use>
+		<filterEMG>false</filterEMG>
+		<dofCalibrationSequence>
+			<Dof>pro_sup</Dof>
+			<Dof>flexion pro_sup</Dof>
+		</dofCalibrationSequence>
+		<trials>
+			<directory>cfg/UpperLimbModel/</directory>
+			<trial>
+				<trialName>FastFlexExt</trialName>
+				<cropMinTime>6</cropMinTime>
+				<cropMaxTime>11</cropMaxTime>
+			</trial>
+<trial>
+				<trialName>FastProSup</trialName>
+				<cropMinTime>15</cropMinTime>
+				<cropMaxTime>21</cropMaxTime>
+			</trial>
+<trial>
+				<trialName>Neutral</trialName>
+				<cropMinTime>4</cropMinTime>
+				<cropMaxTime>4.5</cropMaxTime>
+			</trial>
+		</trials>
+		<option>
+		<noEpsilon>4</noEpsilon>
+			<epsilon>1.E-3</epsilon>
+			<maxNoEval>300000</maxNoEval>
+		</option>
+	</calibration>
+</simulatedAnnealing>        
