@@ -1,4 +1,4 @@
-<subject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../XSD/NMSmodel.xsd">
+<subject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../XSD/NMSmodel.xsd">
 	<muscleDefault>
 		<percentageChange>0.15</percentageChange>
 		<damping>0.5</damping>

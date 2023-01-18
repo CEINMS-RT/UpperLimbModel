@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<executionIK xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../XSD/executionIK_ID_V2.xsd">
+<executionIK xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../XSD/executionIK_ID.xsd">
 	<ik>
 		<ikOption>
 			<numberOfThread>5</numberOfThread>
@@ -67,9 +67,11 @@
 		</lpFilterGRF>
     	<plateForceBody> </plateForceBody>
     </id>
-    <OsimFile>cfg/UpperLimbModel/MOBL_ARMS_fixed_41.osim</OsimFile>
+    <OsimFile>cfg/UpperLimbModel/MOBL_ARMS_41_Scaled.osim</OsimFile>
     <LabFile>cfg/UMG.xml</LabFile>
     <TranslateFile>cfg/UpperLimbModel/LeftArm_scaled_Spline.txt</TranslateFile>
     <ip>10.76.115.143</ip>
     <port>22222</port>
+	<externalLoadsXml>cfg/UpperLimbModel/ID_loadDefinition.xml</externalLoadsXml>
+	<ikTaskFilename>cfg/UpperLimbModel/InverseKinematics.xml</ikTaskFilename>
 </executionIK>

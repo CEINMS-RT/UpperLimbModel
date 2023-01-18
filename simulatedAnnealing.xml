@@ -1,54 +1,46 @@
 ﻿<?xml version="1.0"?>
 <simulatedAnnealing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="../XSD/simulatedAnnealing.xsd">
+        xsi:noNamespaceSchemaLocation="../../XSD/simulatedAnnealing.xsd">
         
 	<EMGProccesing>cfg/UpperLimbModel/executionEMG.xml</EMGProccesing>
-	<subjectXML>cfg/UpperLimbModel/MOBL_ARMS_41.xml</subjectXML>
+	<osimFile>cfg/UpperLimbModel/MOBL_ARMS_41_Scaled.osim</osimFile>
+	<subjectXML>cfg/UpperLimbModel/Right_arm.xml</subjectXML>
 	<NameOfSubject>UpperLimbModel</NameOfSubject>
-	<dofToCalibrate>elbow_flexion flexion pro_sup</dofToCalibrate>
+	<dofToCalibrate>pro_sup flexion elbow_flexion</dofToCalibrate>
 	<computeSpline>
-		<use>false</use>
-		<osimFile>cfg/UpperLimbModel/MOBL_ARMS_41_spline.osim</osimFile>
-		<TranslateFile>cfg/UpperLimbModel/LeftArm_scaled_Spline.txt</TranslateFile>
+		<use>true</use>
 		<printingOption>3</printingOption>
 		<numberOfNode>9</numberOfNode>
 	</computeSpline>
 	<preScaling>
 		<use>false</use>
 		<unscaledOsimFile>cfg/UpperLimbModel/MOBL_ARMS_41.osim</unscaledOsimFile>
-		<osimFile>cfg/UpperLimbModel/MOBL_ARMS_41_Scaled.osim</osimFile>
-		<TranslateFile>cfg/UpperLimbModel/LeftArm_scaled_Spline.txt</TranslateFile>
 	</preScaling>
 	<calibration>
-		<ObjectiveFunction>StrengthCoefficients_ShapeFactor_TendonSlackLength_single</ObjectiveFunction>
-		<use>true</use>
-		<filterEMG>false</filterEMG>
+		<use>false</use>
+		<ObjectiveFunction>StrengthCoefficients_ShapeFactor_TendonSlackLength_single_widerRange</ObjectiveFunction>
+		<EMD>0.1</EMD>
 		<dofCalibrationSequence>
-			<Dof>pro_sup</Dof>
-			<Dof>flexion pro_sup</Dof>
+			<Dof>pro_sup flexion elbow_flexion</Dof>
 		</dofCalibrationSequence>
 		<trials>
 			<directory>cfg/UpperLimbModel/</directory>
 			<trial>
-				<trialName>FastFlexExt</trialName>
-				<cropMinTime>6</cropMinTime>
-				<cropMaxTime>11</cropMaxTime>
-			</trial>
-<trial>
-				<trialName>FastProSup</trialName>
-				<cropMinTime>15</cropMinTime>
-				<cropMaxTime>21</cropMaxTime>
-			</trial>
-<trial>
-				<trialName>Neutral</trialName>
-				<cropMinTime>4</cropMinTime>
-				<cropMaxTime>4.5</cropMaxTime>
+				<trialName>static</trialName>
+				<cropMinTime>2</cropMinTime>
+				<cropMaxTime>5</cropMaxTime>
 			</trial>
 		</trials>
 		<option>
 		<noEpsilon>4</noEpsilon>
-			<epsilon>1.E-3</epsilon>
-			<maxNoEval>300000</maxNoEval>
+			<rt>0.9</rt>
+			<T>20000</T>
+			<NS>5</NS>
+			<NT>5</NT>
+			<epsilon>1.E-5</epsilon>
+			<maxNoEval>20000</maxNoEval>
 		</option>
+		<InputSubjectXMLName>Right_arm.xml</InputSubjectXMLName>
+		<OutputSubjectXMLName>Right_arm_calibrated.xml</OutputSubjectXMLName>
 	</calibration>
 </simulatedAnnealing>        
