@@ -5,6 +5,9 @@
 # UpperLimbModel
 Upper-limb model for CEINMS-RT.
 
+<img src="https://github.com/CEINMS-RT/UpperLimbModel/blob/main/docs/source/image/upperLimbModel.png" width=200>
+
+
 ## Getting Started
 
 ## Examples
