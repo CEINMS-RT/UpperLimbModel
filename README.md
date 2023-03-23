@@ -1,15 +1,13 @@
-<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fsimtk.org%2Fprojects%2Fceinms&psig=AOvVaw3DXjmkpsSo3VLTV43yvEun&ust=1679697749326000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCIjl1--P8_0CFQAAAAAdAAAAABAE" width=800>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1vHDQMUcbXRoh_hAcOvHvIXIQVk2dtlak3QBu-KU_PnGjMAwr6yHy9VdkSe04BuIF9_w&usqp=CAU" width=800>
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)]()
 
 # UpperLimbModel
 Upper-limb model for CEINMS-RT.
-The osim model correponding to the NMS-RT model can be found here: https://simtk.org/frs/?group_id=657
-This is needed for the GUI and computation of the LMT/MA spline.
 
-PLEASE CITE THESE PAPERS
-Saul KR, Hu X, Goehler CM, Daly M, Vidt ME, Velisar A, Murray WM. Benchmarking of dynamic simulation predictions in two software platforms using an upper limb musculoskeletal model. Computer Methods in Biomechanics and Biomedical Engineering. 2015; 18:1445-58. 10.1080/10255842.2014.916698 (2015)
-McFarland, D. C., McCain, E. M., Poppo, M. N., and Saul, K. R. (March 25, 2019). "Spatial Dependency of Glenohumeral Joint Stability During Dynamic Unimanual and Bimanual Pushing and Pulling." ASME. J Biomech Eng. May 2019; 141(5): 051006. https://doi.org/10.1115/1.4043035 (2019)
+## Getting Started
+
+## Examples
 
 ## Citation
 
@@ -62,7 +60,7 @@ OpenSim model [JBE paper](https://pubmed.ncbi.nlm.nih.gov/30835272/) and BibTeX 
 CEINMS-rt is licensed under the [Apache License](LICENSE).
 
 
-###MoBL OpenSim model:
+### MoBL OpenSim model:
 
 Copyright (c) 2014-present, North Carolina State University, Northwestern University, Rehabilitation Institute of Chicago, Valparaiso University, Wake Forest University, Stanford University and VA HCS. All rights reserved. -------------------- The MoBL-ARMS upper limb model has been open sourced solely for non-commercial purposes (including research, academic, evaluation and personal uses) under the BSD 3-Clause License below. By downloading or using this software, (1) you accept the terms and conditions of the aforementioned open source license, (2) acknowledge that your use of this software is non-commercial and commercial use requires a commercial license, and (3) accept that use of the model software must be acknowledged in all publications, presentations, or documents describing work in which the MoBL-ARMS upper limb model is used by citing the following work: Saul KR, Hu X, Goehler CM, Daly M, Vidt ME, Velisar A, Murray WM. Benchmarking of dynamic simulation predictions in two software platforms using an upper limb musculoskeletal model. Computer Methods in Biomechanics and Biomedical Engineering. 2015; 18:1445-58. McFarland, D. C., McCain, E. M., Poppo, M. N., and Saul, K. R. (March 25, 2019). "Spatial Dependency of Glenohumeral Joint Stability During Dynamic Unimanual and Bimanual Pushing and Pulling." ASME. J Biomech Eng. May 2019; 141(5): 051006. https://doi.org/10.1115/1.4043035 (2019) ---------------------------------------------------------------------------------------------------------------------------- Copyright (c) 2014-present, North Carolina State University, Northwestern University, Rehabilitation Institute of Chicago, Valparaiso University, Wake Forest University, Stanford University and VA HCS. All rights reserved. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: 1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. 2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution. 3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
