@@ -5,42 +5,38 @@
 	<EMGProccesing>cfg/UpperLimbModel/executionEMG.xml</EMGProccesing>
 	<osimFile>cfg/UpperLimbModel/MOBL_ARMS_41_Scaled.osim</osimFile>
 	<subjectXML>cfg/UpperLimbModel/Right_arm.xml</subjectXML>
-	<NameOfSubject>UpperLimbModel</NameOfSubject>
-	<dofToCalibrate>pro_sup flexion elbow_flexion</dofToCalibrate>
+	<nameOfSubject>UpperLimbModel</nameOfSubject>
+	<dofsSpline>pro_sup flexion elbow_flexion</dofsSpline>
 	<computeSpline>
 		<use>true</use>
 		<printingOption>3</printingOption>
 		<numberOfNode>9</numberOfNode>
 	</computeSpline>
-	<preScaling>
-		<use>false</use>
-		<unscaledOsimFile>cfg/UpperLimbModel/MOBL_ARMS_41.osim</unscaledOsimFile>
-	</preScaling>
 	<calibration>
 		<use>false</use>
-		<ObjectiveFunction>StrengthCoefficients_ShapeFactor_TendonSlackLength_single_widerRange</ObjectiveFunction>
+		<objectiveFunction>StrengthCoefficients_ShapeFactor_TendonSlackLength_single_widerRange</objectiveFunction>
 		<EMD>0.1</EMD>
-		<dofCalibrationSequence>
-			<Dof>pro_sup flexion elbow_flexion</Dof>
-		</dofCalibrationSequence>
+		<dofToCalibrate>
+			<dofs>pro_sup flexion elbow_flexion</dofs>
+		</dofToCalibrate>
 		<trials>
 			<directory>cfg/UpperLimbModel/</directory>
 			<trial>
 				<trialName>static</trialName>
-				<cropMinTime>2</cropMinTime>
-				<cropMaxTime>5</cropMaxTime>
+				<cropMinTimeFromZero>2</cropMinTimeFromZero>
+				<cropMaxTimeFromZero>5</cropMaxTimeFromZero>
 			</trial>
 		</trials>
 		<option>
-		<noEpsilon>4</noEpsilon>
-			<rt>0.9</rt>
+			<noEpsilon>4</noEpsilon>
+			<RT>0.9</RT>
 			<T>20000</T>
 			<NS>5</NS>
 			<NT>5</NT>
 			<epsilon>1.E-5</epsilon>
 			<maxNoEval>20000</maxNoEval>
 		</option>
-		<InputSubjectXMLName>Right_arm.xml</InputSubjectXMLName>
-		<OutputSubjectXMLName>Right_arm_calibrated.xml</OutputSubjectXMLName>
+		<inputSubjectXMLName>Right_arm.xml</inputSubjectXMLName>
+		<outputSubjectXMLName>Right_arm_calibrated.xml</outputSubjectXMLName>
 	</calibration>
 </simulatedAnnealing>        
