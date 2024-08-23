@@ -20,9 +20,9 @@
   </NMSmodel>
   
   <ConsumerPlugin>
-	<EMGDevice>emg_0_plugins.dll</EMGDevice>
+	<EMGDevice>PluginEMG0.dll</EMGDevice>
 	<EMGDeviceFile>cfg/UpperLimbModel/executionEMG.xml</EMGDeviceFile>
-	<AngleDevice>angle_0_plugins.dll</AngleDevice>
+	<AngleDevice>PluginAngle0.dll</AngleDevice>
 	<AngleDeviceFile>cfg/UpperLimbModel/executionIK.xml</AngleDeviceFile>
 	<TorqueDevice/>
 	<TorqueDeviceFile/>
